@@ -1,0 +1,15 @@
+tensorflow
+keras
+opencv_python_headless
+gdown
+tensorflow
+pandas
+numpy
+scikit-learn
+tensorboard
+matplotlib
+streamlit
+scikeras
+keras
+opencv_python_headless
+gdown
