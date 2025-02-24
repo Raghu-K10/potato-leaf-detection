@@ -3,9 +3,16 @@ import tensorflow as tf
 import numpy as np
 from PIL import Image
 import os
+import gdown
 
-# Load the trained model
-model_path = "trained_plant_disease_model.keras"
+file_id="14oRHUtJawn1sHedzVD3EKl61W0aditpp"
+url='https://drive.google.com/file/d/14oRHUtJawn1sHedzVD3EKl61W0aditpp/view?usp=sharing'
+model_path='trained_plant_disease_model.keras'
+
+
+if not os.path.exists(model_path):
+    st.warning("Downloading model from Google Drive...")
+    gdown.download(url, model_path,quiet=False)
 model = tf.keras.models.load_model(model_path)
 
 # Define class labels for potato leaf diseases
